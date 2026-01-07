@@ -29,9 +29,6 @@ ul {
     margin: 0;
 }
 
-
-/* Başlık ve task satırları aynı flex düzeninde */
-
 li {
     display: flex;
     align-items: center;
@@ -48,21 +45,14 @@ li:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Başlık satırı */
-
 .task-header-row {
     background-color: #f1f5f9;
     font-weight: 600;
     border-bottom: 2px solid #e2e8f0;
 }
 
-
-/* Sütunlar */
-
 .task-info {
     flex: 3;
-    /* Başlık/desc geniş */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -70,7 +60,6 @@ li:hover {
 
 .task-created {
     flex: 1;
-    /* Tarih genişliği sabit */
     white-space: nowrap;
     color: #64748b;
     font-size: 1rem;
@@ -78,14 +67,10 @@ li:hover {
 
 .task-actions {
     flex: 1;
-    /* İşlem sütunu genişliği sabit */
     display: flex;
     gap: 8px;
     align-items: center;
 }
-
-
-/* Completed task */
 
 li.completed {
     background: #f1f5f9;
@@ -93,9 +78,6 @@ li.completed {
     text-decoration: line-through;
     opacity: 0.8;
 }
-
-
-/* Select styling */
 
 select {
     padding: 6px 12px;
@@ -117,9 +99,6 @@ option {
     font-weight: normal;
     color: #1e293b;
 }
-
-
-/* Buttons */
 
 .icon-btn {
     padding: 6px 10px;

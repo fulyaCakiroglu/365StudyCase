@@ -10,18 +10,17 @@ export default function TaskList({ tasks, onStatusChange, onDelete, onEdit }) {
   return (
     <div className="task-list-wrapper">
       <ul>
-        {/* Başlık satırı */}
         <li className="task-header-row">
           <div className="task-info"><strong>Başlık / Açıklama</strong></div>
           <div className="task-created"><strong>Oluşturulma Tarihi</strong></div>
           <div className="task-actions"><strong>Durum / İşlemler</strong></div>
         </li>
 
-        {/* Task satırları */}
         {tasks.map((task) => (
           <li key={task.id} className={task.status === 2 ? "completed" : ""}>
             <div className="task-info" title={task.description}>
               <span><strong>{task.title}</strong></span>
+              <span> - </span>
               <span>{task.description}</span>
             </div>
 
