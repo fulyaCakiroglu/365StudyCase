@@ -34,3 +34,4 @@ C:\Users\Asus\OneDrive\Masaüstü\365StudyCase\backend\obj\Debug\net8.0\ref\back
 C:\Users\Asus\OneDrive\Masaüstü\365StudyCase\backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Asus\OneDrive\Masaüstü\365StudyCase\backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Asus\OneDrive\Masaüstü\365StudyCase\backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Asus\OneDrive\Masaüstü\365StudyCase\backend\obj\Debug\net8.0\backend.sourcelink.json
