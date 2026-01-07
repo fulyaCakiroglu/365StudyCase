@@ -13,7 +13,16 @@ export const createTask = async (task) => {
   });
   return response.json();
 };
+export const deleteTask = async (id) => {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: "DELETE",
+  });
 
+  if (!res.ok) {
+    throw new Error("Task silme işlemi başarısız");
+  }
+  return true;
+};
 export const updateTaskStatus = async (id, status) => {
   await fetch(`${BASE_URL}/${id}/status`, {
     method: "PUT",

@@ -15,7 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseInMemoryDatabase("TaskDb");
 });
-
+//global exception 
+app.UseMiddleware<ExceptionMiddleware>();
 // DI
 builder.Services.AddScoped<ITaskService, TaskService>();
 

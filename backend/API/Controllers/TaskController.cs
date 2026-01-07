@@ -33,4 +33,18 @@ public class TasksController : ControllerBase
         await _taskService.UpdateStatusAsync(id, dto.Status);
         return NoContent();
     }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            await _taskService.DeleteAsync(id);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
 }

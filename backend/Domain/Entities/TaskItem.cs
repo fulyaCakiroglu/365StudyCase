@@ -14,5 +14,5 @@ public class TaskItem
 
     public DateTime CreatedAt { get; set; }
 
-    public bool IsDeleted { get; set; } // Bonus: soft delete
+    public bool IsDeleted { get; set; } = false;
 }

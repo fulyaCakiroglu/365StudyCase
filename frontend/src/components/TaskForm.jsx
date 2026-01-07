@@ -15,7 +15,6 @@ export default function TaskForm({ onCreate }) {
 
     try {
       await onCreate({ title, description });
-      toast.success("Görev başarıyla eklendi!");
       setTitle("");
       setDescription("");
     } catch (error) {
@@ -25,20 +24,24 @@ export default function TaskForm({ onCreate }) {
   };
 
   return (
-    <form onSubmit={submit}>
-      <input
-        type="text"
-        placeholder="Başlık"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Açıklama"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <button type="submit">Görev Ekle</button>
-    </form>
+    <form onSubmit={submit} className="task-form">
+    <input
+      type="text"
+      placeholder="Başlık"
+      value={title}
+      onChange={(e) => setTitle(e.target.value)}
+      className="heading-input"
+    />
+
+    <textarea
+      placeholder="Açıklama"
+      value={description}
+      onChange={(e) => setDescription(e.target.value)}
+      className="description-input"
+    />
+
+    <button type="submit">Görev Ekle</button>
+  </form>
+
   );
 }

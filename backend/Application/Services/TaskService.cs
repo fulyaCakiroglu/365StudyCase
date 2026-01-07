@@ -38,7 +38,7 @@ public class TaskService : ITaskService
         {
             Title = dto.Title,
             Description = dto.Description,
-            Status = TaskState.Pending,
+            Status = TaskState.ToDo,
             CreatedAt = DateTime.UtcNow
         };
 
@@ -66,4 +66,17 @@ public class TaskService : ITaskService
         task.Status = status;
         await _context.SaveChangesAsync();
     }
+    public async Task DeleteAsync(int id)
+    {
+        var task = await _context.Tasks
+            .FirstOrDefaultAsync(x => x.Id == id && !x.IsDeleted);
+
+        if (task == null)
+            throw new Exception("Task not found");
+
+        task.IsDeleted = true;
+        await _context.SaveChangesAsync();
+    }
+
+
 }
